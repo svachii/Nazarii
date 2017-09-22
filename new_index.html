@@ -1,0 +1,235 @@
+<!--
+When you desinging a strcuture from a wireframe always ensure you have 
+the structure ready. Givent that we are going a WebApp, our structure is
+straight-forward: just an html page layout
+-->
+
+<html>
+
+
+
+	<!--app header that contains reference to app resources-->
+	<head>
+		<!--app tile-->
+		<title>Movie App</title>
+
+		<!--referencing minified version of the bootstrap-->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+		<!--referencing our style declarations, we will use an external CSS file for that-->
+		<link rel="stylesheet" href="css/styles.css" />
+
+		<!--we will use "FontAwesome" for our icons, see: http://fontawesome.io, list of all icons: http://fontawesome.io/cheatsheet-->
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+
+		<!--referencing minified version of the angularjs framework-->
+		<script type="text/javascript" src="js/angular.min.js"></script>
+
+		<!--this is important when you designing for mobile, it ensures correct size of your elements-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel=stylesheet href="../jquery.calendarPicker.css" type="text/css" media="screen">
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+			<script type="text/javascript" src="../jquery.calendarPicker.js"></script>
+			<script type="text/javascript" src="jquery.mousewheel.js"></script>
+	</head>
+
+
+
+	<!--app content area (or web page body), this tag will contains our screens-->
+	<body class="container">
+
+
+		<!--
+			header of the app, screen 1
+			this will contain movie buttons and movie picture
+			we will use "class" to mark and style our header, note that
+			we are using "meaning-full" naming for the classes, this a good
+			practice.
+		-->
+		<!--
+			given that our screen 1 header has only a picture and three
+			buttons we can use header itself and set a background image
+			and declare three buttons as child elements. this will ensure
+			that we have very simple structure, which cna be easily manupulated
+		-->
+		<div class="app-screen1-header row">
+			
+			<div class="col-md-12">
+				<!--our "back" button, we use "fa fa-arrow-left" to set our icon-->
+				<a class="app-screen1-header-back fa fa-arrow-left"></a>
+					
+				<!--"info" button-->
+				<a class="app-screen1-header-info fa fa-info pull-right">
+					 				</a>
+					
+				<!--"like" button-->
+				<a class="app-screen1-header-like fa fa-heart-o pull-right">
+					
+				</a>
+			</div>
+
+			<!--"play trailer" button-->
+			<a class="app-screen1-header-play fa fa-play-circle-o position-absolute"></a>
+				
+		</div>
+
+
+		<!--
+			movie name, we will use a separate element for the name
+		-->
+		<div class="app-screen1-name row">
+			<h3 class="col-md-12">Movie name here</h3>
+		</div>
+
+		<!--
+			movie secondary information, for example imdb rating.
+		-->
+		<div class="app-screen1-info row">
+			
+			<!--
+				here is the example of a single item in the stats bar
+				you will need to do other items in the stats bar :)
+			-->
+			<div class="col-md-12">
+				<span>IMDB: <span>7.8     </span></span>
+				<span>__Action | Drama  | Adventure <span></span></span>
+			</div>
+
+		</div>
+
+
+		<!--
+			calendar strucutre
+		-->
+		
+		<div class="app-screen1-calendar row">
+			<!--
+				<iframe src="https://calendar.google.com/calendar/embed?title=showtimes&amp;showPrint=0&amp;showTz=0&amp;height=350&amp;wkst=1&amp;hl=en_GB&amp;bgcolor=%2366cccc&amp;src=7j5fcblunpbcb27a91fo9fmjmg%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=Europe%2FDublin" style= "border-width:0"  width="300" height="350" frameborder="0" scrolling="no"></iframe>
+				calendar
+					!-->
+					
+								</div>
+					<div class="bottom-view">
+						<div class="week-container">
+							<div class="week">
+									<ul>
+								<button type="button" class="btn btn-primary btn-xs">sun</button>
+								<button type="button" class="btn btn-primary btn-xs">mon</button>
+								<button type="button" class="btn btn-primary btn-xs">tue</button>
+								<button type="button" class="btn btn-primary btn-xs">wed</button>
+								<button type="button" class="btn btn-primary btn-xs">thu</button>
+								<button type="button" class="btn btn-primary btn-xs">fri</button>
+								<button type="button" class="btn btn-primary btn-xs">sat</button>
+								</ul>
+								
+								<div class="day">	
+								<button type="button" class="btn btn-primary btn-xs">1</button>
+								<button type="button" class="btn btn-primary btn-xs">2</button>
+								<button type="button" class="btn btn-primary btn-xs">3</button>
+								<button type="button" class="btn btn-primary btn-xs">4</button>
+								<button type="button" class="btn btn-primary btn-xs">5</button>
+								<button type="button" class="btn btn-primary btn-xs">6</button>
+								<button type="button" class="btn btn-primary btn-xs">7</button><p>
+								<button type="button" class="btn btn-primary btn-xs">8</button>
+								<button type="button" class="btn btn-primary btn-xs">9</button>
+								<button type="button" class="btn btn-primary btn-xs">10</button>
+								<button type="button" class="btn btn-primary btn-xs">11</button>
+								<button type="button" class="btn btn-primary btn-xs">12</button>
+								<button type="button" class="btn btn-primary btn-xs">13</button>
+								<button type="button" class="btn btn-primary btn-xs">14</button></p><p>
+								<button type="button" class="btn btn-primary btn-xs">15</button>
+								<button type="button" class="btn btn-primary btn-xs">16</button>
+								<button type="button" class="btn btn-primary btn-xs">17</button>
+                                    <!--<li class="day day-names">sun</li>
+    <li class="day day-names">mon</li>
+    <li class="day day-names">tue</li>
+    <li class="day day-names">wed</li>
+    <li class="day day-names">thu</li>
+    <li class="day day-names">fri</li>
+    <li class="day day-names">sat</li>
+<!--</ul>
+<ul class="week">!-->
+
+								<button type="button" class="btn btn-primary btn-xs">18</button>
+								<button type="button" class="btn btn-primary btn-xs">19</button>
+								<button type="button" class="btn btn-primary btn-xs">20</button>
+								<button type="button" class="btn btn-primary btn-xs">21</button></p><p>
+								<button type="button" class="btn btn-primary btn-xs">22</button>
+								<button type="button" class="btn btn-primary btn-xs">23</button>
+								<button type="button" class="btn btn-primary btn-xs">24</button>
+								<button type="button" class="btn btn-primary btn-xs">25</button>
+								<button type="button" class="btn btn-primary btn-xs">26</button>
+								<button type="button" class="btn btn-primary btn-xs">27</button>
+								<button type="button" class="btn btn-primary btn-xs">28</button></p><p>
+								<button type="button" class="btn btn-primary btn-xs">29</button>
+								<button type="button" class="btn btn-primary btn-xs">30</button>
+								<button type="button" class="btn btn-primary btn-xs">31</button>
+							</div>	
+							</div>
+							
+							<!--	<li class="day">1</li>
+								<li class="day current point">2</li>
+								<li class="day">3</li>
+								<li class="day">4</li>
+								<li class="day">5</li>
+								<li class="day">6</li>
+								<li class="day">7</li>
+								<li class="day">8</li>
+								<li class="day">9</li>
+								<li class="day">10</li>
+								<li class="day">11</li>
+								<li class="day">12</li>
+								<li class="day">13</li>
+								<li class="day">14</li>
+								<li class="day">14</li>
+								<li class="day">16</li>
+								<li class="day">17</li>
+								<li class="day">18</li>
+								<li class="day">19</li>
+								<li class="day">20</li>
+								<li class="day">21</li>
+								<li class="day">22</li>
+								<li class="day">23</li>
+								<li class="day">24</li>
+								<li class="day">25</li>
+								<li class="day">26</li>
+								<li class="day">27</li>
+								<li class="day">28</li>
+								<li class="day">26</li>
+								<li class="day">27</li>
+								<li class="day">28</li>
+								<li class="day">29</li>
+								<li class="day">30</li>
+								<li class="day">31</li> !-->
+							</ul>	
+						</div>
+					</div>	
+					</div>
+				</div>
+	</div>
+		
+
+		<!--
+			app main manu
+		-->
+		<div class="app-menu row">
+			<center>
+					<button type="button" class="button">10-30am</button>
+					<button type="button" class="button">12-00pm</button>
+					<button type="button" class="button">01-15pm</button>
+					<button type="button" class="button">02-45pm</button>
+					<button type="button" class="button">03-20pm</button>
+					<button type="button" class="button">05-00pm</button>		
+			</center>
+		</p>
+
+			
+		</div>
+
+
+	</body>
+
+
+
+</html>

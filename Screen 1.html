@@ -1,0 +1,163 @@
+<!--
+When you desinging a strcuture from a wireframe always ensure you have
+the structure ready. Givent that we are going a WebApp, our structure is
+straight-forward: just an html page layout
+-->
+
+<html>
+
+
+
+<!--app header that contains reference to app resources-->
+<head>
+	<!--app tile-->
+	<title>Movie App</title>
+
+	<!--referencing minified version of the bootstrap-->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!--referencing our style declarations, we will use an external CSS file for that-->
+	<link rel="stylesheet" href="css/styles.css" />
+
+	<!--we will use "FontAwesome" for our icons, see: http://fontawesome.io, list of all icons: http://fontawesome.io/cheatsheet-->
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+
+	<!--referencing minified version of the angularjs framework-->
+	<script type="text/javascript" src="js/angular.min.js"></script>
+
+	<!--this is important when you designing for mobile, it ensures correct size of your elements-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel=stylesheet href="../jquery.calendarPicker.css" type="text/css" media="screen">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../jquery.calendarPicker.js"></script>
+	<script type="text/javascript" src="jquery.mousewheel.js"></script>
+</head>
+
+
+
+<!--app content area (or web page body), this tag will contains our screens-->
+<body class="container padding-0 marging-0">
+
+
+	<!--
+		header of the app, screen 1
+		this will contain movie buttons and movie picture
+		we will use "class" to mark and style our header, note that
+		we are using "meaning-full" naming for the classes, this a good
+		practice.
+	-->
+	<!--
+		given that our screen 1 header has only a picture and three
+		buttons we can use header itself and set a background image
+		and declare three buttons as child elements. this will ensure
+		that we have very simple structure, which cna be easily manupulated
+	-->
+	<div class="app-screen1-header row">
+
+		<div class="col-md-12">
+			<!--our "back" button, we use "fa fa-arrow-left" to set our icon-->
+			<a class="app-screen1-header-back fa fa-arrow-left"></a>
+
+			<!--"info" button-->
+			<a class="app-screen1-header-info fa fa-info pull-right"></a>
+
+			<!--"like" button-->
+			<a class="app-screen1-header-like fa fa-heart-o pull-right"></a>
+		</div>
+
+		<!--"play trailer" button-->
+		<a class="app-screen1-header-play fa fa-play-circle-o position-absolute"></a>
+
+	</div>
+
+
+	<!--
+		movie name, we will use a separate element for the name
+	-->
+	<div class="app-screen1-name row">
+		<h3 class="col-md-12 marging-left-20 marging-right-20">Movie name here</h3>
+	</div>
+
+	<!--
+		movie secondary information, for example imdb rating.
+	-->
+	<div class="app-screen1-info row">
+
+		<!--
+			here is the example of a single item in the stats bar
+			you will need to do other items in the stats bar :)
+		-->
+		<div class="col-md-12 app-screen1-info-items marging-left-20 marging-right-20">
+			<span class="item">IMDB: <b>7.8</b></span>
+			<span class="item padding-left-20">Action</span>
+			<span class="item separator padding-left-10">Drama</span>
+			<span class="item separator padding-left-10">Adventue</span>
+		</div>
+
+	</div>
+
+
+	<!--
+		calendar strucutre
+	-->
+	<div class="app-screen1-calendar row">
+
+		<div class="col-md-12 calendar-days">
+			<a class="day">M</a>
+			<a class="day">T</a>
+			<a class="day">W</a>
+			<a class="day">T</a>
+			<a class="day">F</a>
+			<a class="day">S</a>
+			<a class="day">S</a>
+		</div>
+		<div class="col-md-12 calendar-dates">
+			<a class="date">1</a>
+			<a class="date">2</a>
+			<a class="date active">3</a>
+			<a class="date">4</a>
+			<a class="date">5</a>
+			<a class="date">6</a>
+			<a class="date">7</a>
+		</div>
+		<div class="col-md-12 calendar-times">
+			<a class="time col-md-4">10-30am</a>
+			<a class="time col-md-4">12-00pm</a>
+			<a class="time col-md-4">01-15pm</a>
+			<a class="time col-md-4">02-45pm</a>
+			<a class="time col-md-4">03-20pm</a>
+			<a class="time col-md-4">05-00pm</a>
+		</div>
+
+	</div>
+	
+
+
+	<!--
+		app main manu
+	-->
+	<div class="app-menu row" style="position:absolute";>
+		<div class="col-md-12">
+			<a class="menu-button col-xs-3"> 
+				<i class="fa fa-film"></i>
+			</a> 
+		
+			<a class="menu-button col-xs-3 active">
+				<i class="fa fa-ticket"></i>
+			</a> 
+			<a class="menu-button col-xs-3">
+				<i class="fa fa-user-o"></i>
+			</a>
+			<a class="menu-button col-xs-3">
+				<i class="fa fa-search"></i>
+			</a>
+		 </div>
+	</div>
+
+
+</body>
+
+
+
+</html>

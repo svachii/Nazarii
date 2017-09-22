@@ -1,0 +1,167 @@
+<!--
+When you desinging a strcuture from a wireframe always ensure you have
+the structure ready. Givent that we are going a WebApp, our structure is
+straight-forward: just an html page layout
+-->
+
+<html>
+
+
+
+<!--app header that contains reference to app resources-->
+<head>
+	<!--app tile-->
+	<title>Movie App</title>
+
+	<!--referencing minified version of the bootstrap-->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<!--referencing our style declarations, we will use an external CSS file for that-->
+	<link rel="stylesheet" href="css/styles.css" />
+
+	<!--we will use "FontAwesome" for our icons, see: http://fontawesome.io, list of all icons: http://fontawesome.io/cheatsheet-->
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+
+	<!--referencing minified version of the angularjs framework-->
+	<script type="text/javascript" src="js/angular.min.js"></script>
+
+	<!--this is important when you designing for mobile, it ensures correct size of your elements-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+</head>
+
+
+
+<!--app content area (or web page body), this tag will contains our screens-->
+<body class="container padding-0 marging-0">
+		
+	<div class="app-screen2-header row">
+		<div class="menu-top">
+		<div class="col-xs-12"> 
+			<i class="fa fa-close"  style="font-size:2em "></i>
+			<h2 class="col-md-12 marging-left-20 marging-right-20">War for the planet of the Apes</h2>
+			<h2 class="col-md-12 marging-left-20 marging-right-20"> 8 Aug 2017-12:00pm</h2>
+		</div><a class="menu-top col-xs-12 marging-left-15 marging-right-15"> 
+			<i class="fa fa-pencil-square-o" style="font-size:2em "></i>
+		</a>
+	</div>	
+			<a class="Stun col-xs-12"> 
+				<a class="Occupied">Occupied
+				<a class="Available">Available
+				<a class="Selected">Selected</a></a></a>	
+					
+		</div>
+			<div class="bow">
+				<div>
+					Screen
+				</div>
+			</div>
+				<center>
+			
+			<div class="screen-row" row="A">
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+			</div>
+			<div class="screen-row" row="B">
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats curent">.</a>
+				<a class="Seats curent">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+			</div>
+			<div class="screen-row" row="C">
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats curent">.</a>
+				<a class="Seats curent">.</a>
+				<a class="Seats curent">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+			</div>
+			<div class="screen-row" row="D">
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats active">.</a>
+				<a class="Seats active">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+			</div>
+			<p></p>
+			<div class="screen-row" row="E">
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+			</div>
+			<div class="screen-row" row="F">
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+			</div>
+			<div class="screen-row" row="G">
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>
+				<a class="Seats">.</a>	
+			</div>
+		</center>
+		<div class="info">
+				<a class="menu-info col-xs-3"> 
+						<i class="fa fa-users"  style="font-size: 2em;"></i>
+					</a> 
+					<p></p>
+					<span class="item">Row:<b>D</b></span>
+					<span class="item  separator padding-left-30">Seats:<b>5,6</b></span>
+					<i class="fa fa-dollar  separator padding-left-30" style="font-size: 2em;";></i>
+					<span class="item"><b>32.50</b></span>
+
+					
+		</div>	
+	<div>
+			<button type="button" class="btn btn-primary btn-lg btn-block">Confirm Seats & Checkout</button>
+	</div>
+</body>
+
+
+
+</html>
